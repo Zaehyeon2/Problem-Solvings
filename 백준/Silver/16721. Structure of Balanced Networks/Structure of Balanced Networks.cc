@@ -1,0 +1,2 @@
+#include <cstdio>
+char zerostate[5001]; int main(){ int n; scanf("%d\n", &n); for (int i = 0; i < n; ++i) { scanf("%c ",&zerostate[i]); } for (int i = n; i < n*n; ++i) { scanf("%*c "); } int m; scanf("%d", &m); while(m--){ int b, c; scanf("%d%d",&b, &c); if(b == 0) printf("%c\n", zerostate[c]); else if(c == 0) printf("%c\n", zerostate[b]); else if(zerostate[b] == zerostate[c]) printf("+\n"); else printf("-\n"); } }
